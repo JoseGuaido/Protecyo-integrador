@@ -1,0 +1,256 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat Alternates", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+:root {
+  --color-black: #000;
+  --color-white: #ffffff;
+  --color-red: #d90429;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  color: #000;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  overflow-x: hidden;
+  background: url(./Imagen/desktop-wallpaper-super-mario-bros-1920-1200-we-love-fondos-de-pantalla-de-juegos-fondo-de-pantalla-laptop-fondo-de-pantalla-para-iphone-5s.jpg);
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
+}
+.capa {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+  top: 0;
+  left: 0;
+}
+/*Estilos para el encabezado*/
+.header {
+  width: 100%;
+  height: 100px;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+.container .btn-menu,
+.logo {
+  float: left;
+  line-height: 100px;
+}
+.container .btn-menu label {
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+}
+.logo h1 {
+  color: #fff;
+  font-weight: 400;
+  font-size: 22px;
+  margin-left: 10px;
+}
+.container .menu {
+  float: right;
+  line-height: 100px;
+}
+.container .menu a {
+  display: inline-block;
+  padding: 15px;
+  line-height: normal;
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  font-size: 15px;
+  margin-right: 5px;
+}
+.container .menu a:hover {
+  border-bottom: 2px solid #c7c7c7;
+  padding-bottom: 5px;
+}
+/*Fin de Estilos para el encabezado*/
+
+/*Menù lateral*/
+#btn-menu {
+  display: none;
+}
+.container-menu {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  transition: all 500ms ease;
+  opacity: 0;
+  visibility: hidden;
+}
+#btn-menu:checked ~ .container-menu {
+  opacity: 1;
+  visibility: visible;
+}
+.cont-menu {
+  width: 100%;
+  max-width: 250px;
+  background: #1c1c1c;
+  height: 100vh;
+  position: relative;
+  transition: all 500ms ease;
+  transform: translateX(-100%);
+}
+#btn-menu:checked ~ .container-menu .cont-menu {
+  transform: translateX(0%);
+}
+.cont-menu nav {
+  transform: translateY(15%);
+}
+.cont-menu nav a {
+  display: block;
+  text-decoration: none;
+  padding: 20px;
+  color: #c7c7c7;
+  border-left: 5px solid transparent;
+  transition: all 400ms ease;
+}
+.cont-menu nav a:hover {
+  border-left: 5px solid #c7c7c7;
+  background: #1f1f1f;
+}
+.cont-menu label {
+  position: absolute;
+  right: 5px;
+  top: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+/* Conteiner Star */
+a {
+  color: #c7c7c7;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+}
+.gradient-text {
+  background: var(--color-white);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.form-main {
+  min-width: 100vh;
+  padding: 60px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-content {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 1;
+}
+.form-content .box {
+  border-color: var(--color-black);
+  border: 1px solid var(--color-black);
+  padding: 40px 50px;
+  border-radius: 20px;
+  backdrop-filter: blur(8px);
+}
+.form-content h3 {
+  font-size: 28px;
+  text-align: center;
+  line-height: 1.2;
+  color: var(--color-white);
+  font-weight: 500;
+}
+.form-content form {
+  margin: 25px 0 20px;
+}
+.form-content .input-box {
+  color: var(--color-white);
+  margin-bottom: 25px;
+}
+.form-content ::placeholder {
+  color: inherit;
+  opacity: 1;
+}
+.form-content .input-control {
+  display: block;
+  height: 45px;
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid var(--color-white);
+  color: inherit;
+  font-weight: inherit;
+  font-family: "Righteous", cursive;
+  font-size: 16px;
+}
+.form-content .input-control:focus {
+  outline: none;
+}
+.form-content .input-link {
+  margin-top: 10px;
+  text-align: right;
+}
+.form-content .btn {
+  height: 45px;
+  width: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: capitalize;
+  font-family: "Righteous", cursive;
+  cursor: pointer;
+  border-radius: 25px;
+  user-select: none;
+  background: transparent;
+  color: var(--color-white);
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+.form-content .btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  z-index: -1;
+}
+.form-content .btn:hover::before {
+  background-color: transparent;
+}
+.form-content p {
+  color: var(--color-white);
+  text-align: center;
+}
+/* Pagina inicio */
+.nav-star nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
+  font-weight: bold;
+}
+.nav-star h1 {
+  color: var(--color-white);
+  font-size: 45px;
+}

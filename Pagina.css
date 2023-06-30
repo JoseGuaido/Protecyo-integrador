@@ -273,7 +273,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
+  padding: 25px;
   text-decoration: none;
   color: #2fb4cc;
   border-radius: 4px;
@@ -289,6 +289,21 @@ header {
   text-align: center;
   position: relative;
 }
+.text-descrip {
+  width: 100%;
+  max-width: 1080px;
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: center;
+  color: #ffffff;
+  background: #000;
+  font-family: "Caprasimo", cursive;
+}
+.text-descrip h2 {
+  font-size: 40px;
+  font-weight: 100;
+}
 /* Footer */
 .pie-pagina {
   width: 100%;
@@ -301,7 +316,7 @@ header {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 50px;
-  padding: 45px 0px;
+  padding: 55px 0px;
 }
 .pie-pagina .grupo-1 .box figure {
   width: 100%;
@@ -356,5 +371,19 @@ header {
     grid-template-columns: repeat(1, 1fr);
     grid-gap: 30px;
     padding: 35px 0px;
+  }
+  .bar-btn {
+    display: flex;
+  }
+  .card-icon {
+    display: none;
+  }
+  .content-text {
+    display: none;
+  }
+  .container-card {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
   }
 }
